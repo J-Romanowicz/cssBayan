@@ -1,0 +1,88 @@
+/*               NULL         */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+.wrapper{
+min-height: 100%;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+font-family: "Climate Crisis";
+margin: 0 auto;
+justify-content: center;
+align-items: center;
+}
+.title h1{
+text-align: left;
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	color: #5b66cc;
+	text-decoration: underline;
+}
+.accordion:hover{
+	color:#000;
+	text-decoration: none;
+}
+.accordion-item {
+  border: 1px solid #ccc;
+	display: flex;
+	flex-direction: column;
+	width: 70vh;
+}
+.accordion-content{
+display: flex;
+justify-content: center;
+width: 100%;
+}
+.accordion-content img {
+max-width: 100%;
+padding-bottom: 1vh;
+}
+.accordion-title {
+  background-color: #eee;
+  padding: 10px;
+	position: relative;
+	display: flex;
+}
+.accordion-title::after(:hover) {
+  content: "x";
+	display: block;
+  transform: rotate(90deg);
+  position: absolute;
+  transition: transform 0.2s ease-in-out;
+}
+.accordion-item:hover .accordion-content {
+  display: block;
+}
+
+.accordion-item:not(:hover) .accordion-content {
+  display: none;
+}
+.accordion-item.active .accordion-content {
+  display: block;
+}
