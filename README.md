@@ -1,3 +1,3 @@
 ﻿# cssBayan
 # cssBayan
-https://${J-Romanowicz}.github.io/cssBayan/cssBayan/index.html
+https://J-Romanowicz.github.io/cssBayan/cssBayan/index.html
