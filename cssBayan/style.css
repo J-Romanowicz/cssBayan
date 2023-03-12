@@ -1,0 +1,139 @@
+/*               NULL         */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a, a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 5vh;
+  font-weight: 400;
+	width: 100%;
+  color: #000000;
+}
+/*             WRAPPER      */
+body {
+	margin: 0 auto;
+  max-width: 70%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+	font-family: 'Rampart One';
+	box-sizing: border-box;
+	font-size: 3vh;
+}
+.title{
+	color: #2e18f1;
+}
+.active-title{
+	color:#000000;
+}
+.main:hover .title{
+	color:#000000;
+}
+.main:hover label{
+	cursor: pointer;
+}
+.item-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+	padding-top: 5vh;
+}
+/*             icon animation      */
+.icon {
+
+}
+
+.icon-cross-line{
+	position: relative;
+	width: 5vh;
+  height: 5vh;
+	opacity: 0;
+}
+.main:hover .icon-cross-line{
+	opacity: 1;
+}
+.icon-line {
+  position: absolute;
+  height: 20%;
+  width: 80%;
+  content: "";
+  background-color: #000000;
+	transition: all .5s ease 0s;
+	transform: translate(0%, 100%);
+}
+.line-1 {
+	transform: translate(0%, -100%);
+}
+.line-2 {
+	transform: translate(0%, -100%);
+}
+/*             accordion      */
+img {
+  max-height: 0;
+  width: 50%;
+  max-width: 50vh;
+  margin-bottom: 3vh;
+  transition: 0.5s ease;
+}
+input {
+  display: none;
+}
+input:checked~img {
+  max-height: 100vh;
+  padding: 5vh;
+}
+label:hover .line-2,
+input:checked~.line-2 {
+  transform: rotate(45deg);
+}
+label:hover .line-1,
+input:checked~.line-1 {
+  transform: rotate(-45deg);
+}
+label:hover img {
+  max-height: 100vh;
+  transition: max-height 0.5s ease-in-out;
+
+}
+input:checked .title{
+  color: #000000;
+}
+label {
+  border-top: 0.5vh solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*             media     */
+@media (max-width: 1179px) {
+		img{
+			width: 100%;
+		}
+    .wrapper:hover .title {
+        color: #000000;
+    }
+}
+@media (max-width: 720px) {
+body{
+	max-width: 80%;
+}
+}
+@media (max-width: 320px) {
+	body{
+		max-width: 100%;
+	}
+	}
