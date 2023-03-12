@@ -23,7 +23,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*             WRAPPER      */
 body {
-  padding: 2% 10% 10%;
+	margin: 0 auto;
+  max-width: 70%;
   background: rgba(0, 0, 0, 0.2);
 }
 .wrapper {
@@ -119,17 +120,20 @@ label {
 }
 /*             media     */
 @media (max-width: 1179px) {
-    .wrapper{
-        font-size: 3vh;
-    }
 		img{
 			width: 100%;
 		}
     .wrapper:hover .title {
         color: #000000;
     }
-
-    .wrapper:hover .icon {
-        display: block;
-    }
 }
+@media (max-width: 720px) {
+body{
+	max-width: 80%;
+}
+}
+@media (max-width: 320px) {
+	body{
+		max-width: 100%;
+	}
+	}
